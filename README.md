@@ -8,7 +8,7 @@ This project is both a **visual simulation** and an **educational tool** for und
 
 ---
 
-## 🚀 How to Run the Simulation
+##  How to Run the Simulation
 
 ###  Run Locally
 
@@ -29,45 +29,45 @@ This project is both a **visual simulation** and an **educational tool** for und
    http://localhost:8000
    ```
 
-> ⚠️ A local server is recommended to avoid browser security restrictions.
+>  A local server is recommended to avoid browser security restrictions.
 
 ---
 
-## 🎮 Core Controls & Buttons
+##  Core Controls & Buttons
 
-### ▶️ Play / ⟳ Reset
+###  Play / ⟳ Reset
 
 * **Play**: Starts or resumes the simulation loop.
 * **Reset**: Clears particles, velocity fields, dye, and resets the scene.
 
-### 🧹 Clear Obstacles
+###  Clear Obstacles
 
 * Removes all painted solid geometry from the simulation grid.
 
 ---
 
-## 🛠 Editing Tools
+##  Editing Tools
 
-### 🧱 Paint Obstacle (Key: `O`)
+###  Paint Obstacle (Key: `O`)
 
 * Click and drag on the simulation to paint solid walls.
 * Obstacles block fluid flow and affect pressure and velocity.
 
-### 🧽 Erase (Key: `E`)
+###  Erase (Key: `E`)
 
 * Removes obstacles or pipes where dragged.
 
-### 🚿 Add Pipe (Key: `P`)
+###  Add Pipe (Key: `P`)
 
 * Places a pipe that continuously injects water particles.
 * Right-click a pipe to delete it.
 
-### 🎨 Dye Splash (Key: `D`)
+###  Dye Splash (Key: `D`)
 
 * Injects colored dye into the fluid.
 * Used to visualize velocity, vortices, and mixing.
 
-### 🚤 Add / Remove Boat (Key: `B`)
+###  Add / Remove Boat (Key: `B`)
 
 * Adds a floating boat that responds to:
 
@@ -78,21 +78,21 @@ This project is both a **visual simulation** and an **educational tool** for und
 
 ---
 
-## 🌧 Environment Controls
+## Environment Controls
 
-### ☔ Rain Toggle
+###  Rain Toggle
 
 * **Rain ON/OFF**: Adds particles from above the simulation volume.
 * Useful for filling large scenes naturally.
 
-### ⚡ Pulse
+###  Pulse
 
 * Injects a short burst of energy into the fluid.
 * Creates waves and turbulence.
 
 ---
 
-## ⚙️ Physics Parameters
+##  Physics Parameters
 
 All sliders update the simulation **in real time**.
 
@@ -120,7 +120,7 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 🧊 Grid & Volume Controls
+##  Grid & Volume Controls
 
 ### Grid Size
 
@@ -134,7 +134,7 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 🔊 Musical Coral (Advanced Feature)
+##  Musical Coral (Advanced Feature)
 
 * Coral nodes respond to nearby fluid velocity.
 * Stronger flow produces higher audio intensity.
@@ -142,7 +142,7 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 🎥 Camera Controls
+##  Camera Controls
 
 * **Click + Drag**: Rotate the 3D view
 * **Scroll Wheel**: Zoom in/out
@@ -150,7 +150,7 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 🧠 Educational Concepts Demonstrated
+##  Educational Concepts Demonstrated
 
 * FLIP / PIC hybrid fluid solvers
 * Particle-to-grid and grid-to-particle transfers
@@ -161,12 +161,12 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 
 ---
 
-## ✅ Tips for Best Results
+##  Tips for Best Results
 
 * Start with **Rain ON** to fill the volume.
 * Add obstacles to create channels or pools.
@@ -176,7 +176,7 @@ All sliders update the simulation **in real time**.
 
 ---
 
-## 📜 License
+##  License
 
 This project is provided for educational and demonstration purposes.
 
