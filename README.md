@@ -1,5 +1,3 @@
-# waveforge-3D-simulation
-
 # 🌊 WaveForge 3D — FLIP Water Simulator
 
 WaveForge 3D is an interactive, browser-based 3D fluid simulation that demonstrates a **FLIP/PIC particle–grid hybrid solver**. Users can sculpt environments, inject water, adjust physics parameters in real time, and explore how fluids behave in a dynamic 3D space.
