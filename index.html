@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WaveForge 3D - FLIP Water Simulator</title>
+
+  <!-- Prevent favicon 404 during dev -->
+  <link rel="icon" href="data:,">
+
+  <!-- Load stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- 3D view -->
+    <canvas id="view" aria-label="3D Simulation Canvas"></canvas>
+
+    <!-- UI Panel -->
+    <div id="ui" role="region" aria-label="Controls">
+      <h1>WaveForge 3D - FLIP Water Simulator</h1>
+
+      <div class="sub">
+        A 3D FLIP fluid with pipes, rain, obstacles, dye, a floating boat, and musical coral.
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <button id="playPause" type="button">⏵ Play</button>
+          <button id="reset" type="button">⟲ Reset</button>
+          <button id="clearObstacles" type="button">🗑️ Clear Obstacles</button>
+        </div>
+
+        <div class="row" style="margin-top: 6px;">
+          <button id="toolObstacle" type="button">🧱 Paint Obstacle</button>
+          <button id="toolErase" type="button">🧹 Erase</button>
+          <button id="toolPipe" type="button">🚰 Add Pipe</button>
+          <button id="toolDye" type="button">🎨 Dye Splash</button>
+          <button id="toolBoat" type="button">🛥️ Add/Remove Boat</button>
+        </div>
+
+        <div class="small" style="margin-top: 6px;">
+          Tools:
+          <span class="kbd">O</span>/<span class="kbd">E</span>/<span class="kbd">P</span>/
+          <span class="kbd">D</span>/<span class="kbd">B</span>.
+          Drag on canvas to paint at the current Z-slice.
+          Right-click a pipe to delete.
+        </div>
+      </div>
+
+      <div class="card">
+        <label for="gridSize">Grid size</label>
+        <div class="row">
+          <select id="gridSize" name="gridSize">
+            <option value="24x18x18">24x18x18</option>
+            <option value="32x24x24" selected>32x24x24</option>
+            <option value="40x30x30">40x30x30</option>
+          </select>
+          <button id="applyGrid" type="button">Apply</button>
+        </div>
+
+        <label for="gravity">Gravity g: <span id="gLabel">9.8</span></label>
+        <input id="gravity" type="range" min="2" max="25" step="0.1" value="9.8" />
+
+        <label for="damp">Damping (velocity): <span id="dampLabel">0.02</span></label>
+        <input id="damp" type="range" min="0" max="0.15" step="0.005" value="0.02" />
+
+        <label for="omega">Over-relaxation ω: <span id="omegaLabel">1.9</span></label>
+        <input id="omega" type="range" min="1.0" max="1.99" step="0.01" value="1.9" />
+
+        <label for="alpha">PIC/FLIP mix α: <span id="alphaLabel">0.10</span></label>
+        <input id="alpha" type="range" min="0.0" max="1.0" step="0.05" value="0.10" />
+
+        <div class="row">
+          <button id="toggleRain" type="button">🌧️ Rain OFF</button>
+          <button id="pulseWave" type="button">🌊 Pulse</button>
+        </div>
+
+        <label for="pipePressure">Pipe pressure: <span id="pipeLabel">1.4</span></label>
+        <input id="pipePressure" type="range" min="0" max="3" step="0.05" value="1.4" />
+
+        <label for="sliceZ">Z-slice: <span id="sliceLabel">12</span></label>
+        <input id="sliceZ" type="range" min="0" max="23" step="1" value="12" />
+
+        <label for="boatMass">Boat mass: <span id="massLabel">1.0</span></label>
+        <input id="boatMass" type="range" min="0.3" max="4" step="0.1" value="1.0" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Load script LAST so DOM exists -->
+  <script src="./main.js"></script>
+</body>
+</html>
